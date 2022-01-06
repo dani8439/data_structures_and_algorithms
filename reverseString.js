@@ -43,3 +43,7 @@ function reverseString3(str) {
   // can simplify syntax
   return str.split("").reduce((rev, char) => char + rev, "");
 }
+
+function reverseString3(str) {
+  return str.split("").reduce((rev, char) => char + rev, "");
+}
