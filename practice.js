@@ -62,3 +62,49 @@ function maxChar(str) {
   }
   return maxChar;
 }
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+function reverseString2(str) {
+  let reversed = "";
+  for (let char of str) {
+    reversed = char + reversed;
+  }
+  return reversed;
+}
+
+function reverseString3(str) {
+  return str.split("").reduce((rev, char) => char + rev, "");
+}
+
+function palidrome(str) {
+  const reversed = str.split("").reverse().join("");
+
+  return reversed === str;
+}
+
+function palindrome2(str) {
+  return str.split("").every((char, i) => {
+    return char === str[str.length - i - 1];
+  });
+}
+
+function reverseInt(n) {
+  const reversed = n.toString().split("").reverse().join("");
+
+  return parseInt(reversed) * Math.sign(n);
+}
+
+function reverseInt2(n) {
+  const reversed = n.toString().split("").reverse().join("");
+
+  if (n < 0) {
+    return parseInt(reversed) * -1;
+  } else {
+    return parseInt(reversed);
+  }
+}
+
+function maxChar(str) {}
