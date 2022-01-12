@@ -29,3 +29,17 @@ function chunk(array, size) {
 }
 
 module.exports = chunk;
+
+// Solution 2
+function chunk2(array, size) {
+  const chunked = [];
+  let index = 0;
+
+  while (index < array.length) {
+    // slice statement that will take slice out of original array. This is the hard part right here, of index + size. Then once that's taken, push it all into the chunked array.
+    chunked.push(array.slice(index, index + size));
+    // not incrementing by 1, but by the size variable (as that's what we've taken out of the original array)
+    index += size;
+  }
+  return chunked;
+}

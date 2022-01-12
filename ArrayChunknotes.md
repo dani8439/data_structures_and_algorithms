@@ -59,3 +59,18 @@ With `slice()` method in mind, can think of an alternative approach to the chunk
 
 - Push a slice of length 'size' from 'array' into chunked.
 - Add 'size' to 'index'
+
+```
+function chunk(array, size) {
+  const chunked = [];
+  let index = 0;
+
+  while (index < array.length) {
+    // slice statement that will take slice out of original array. this is the hard part right here, index + size. Then push it all into the chunked array.
+    chunked.push(array.slice(index, index + size));
+    // not incrementing by 1, but by size variable
+    index += size;
+  }
+  return chunked;
+}
+```
