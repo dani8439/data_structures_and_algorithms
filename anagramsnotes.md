@@ -33,3 +33,22 @@ Could iterate over both character maps to check.
 One last gotcha around character maps. Need to iterate through both? Compare both to each other. But there is an easier way to do that, a shortcut rather than doing a comparison one way and then doing back to each other. Can instead, count the number of keys present in one object, and compare it to the other.
 
 Another way would be to count length of characters in each string and compare.
+
+# Solution
+
+Want to create a helper function so don't have to character map both.
+
+To pull out keys:
+
+```
+const obj = {
+    a: 1,
+    b: 1,
+    c: 1
+};
+
+Object.keys(obj);
+// ["a", "b", "c"]
+Object.keys(obj).length;
+// 3
+```
