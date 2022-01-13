@@ -52,3 +52,31 @@ Object.keys(obj);
 Object.keys(obj).length;
 // 3
 ```
+
+## Second Solution
+
+A little more straightforward. Depends on knowing a trick.
+
+```
+const numbers = [10, 30, 5, -90, 1000]
+
+numbers.sort();
+```
+
+sort will try to meaningfully sort the array.
+
+If we sort characters, we end up with alphabetical order.
+
+Going to take our two inputs, clean them up, by removing any spaces or punctuation, lowercase them, then going to sort both strings. Will end up in exact same order. If they are exactly identical, we have an anagram. No need to loop, can sort both strings, compare the two and say we're done.
+
+Again going to make a helper function to clean up both strings
+
+```
+function cleanString(str) {
+  return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
+}
+
+function anagrams(stringA, stringB) {
+    return cleanString(stringA) === cleanString(stringB);
+}
+```
