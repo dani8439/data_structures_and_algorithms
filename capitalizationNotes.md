@@ -31,3 +31,21 @@ Pseudo-Code:
 - Push the result into 'words' array
 
 4. Join 'words' into a string and return it.
+
+### Solution 2
+
+1. Create an empty string called 'result'.
+2. For each character in the string
+
+- **IF** the character to the left is a space
+- Capitalize it and add it to 'result'
+- **ELSE**
+- Add it to 'result'
+
+EX: hi_there
+
+Solution has 1 big weakness to it. If no space doesn't work well with very first character. So when we are capitalizing a sentence, very first character should always be capitalized. An easy way to solve this, is to say when we create initial strine result, we should:
+
+1. Create 'result' which is the first cahracter of the input string capitalized instead.
+
+Then as we iterate through rest of array of characters, start at index 1, consider everything from there moving forward. Requires a manual for loop. A for of loop iterates through every character. Don't want to do that, want to skip that.
