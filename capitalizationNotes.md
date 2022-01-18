@@ -17,3 +17,17 @@ word.slice(1) // here
 word[0] // t
 word[0].toUpperCase() // T
 ```
+
+## Solution 1:
+
+Pseudo-Code:
+
+1. Make an empty array 'words'
+2. split the input string by spaces to get an array
+3. For each word in the array:
+
+- Uppercase the first letter of the word
+- Join first letter with the rest of the string
+- Push the result into 'words' array
+
+4. Join 'words' into a string and return it.

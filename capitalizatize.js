@@ -7,6 +7,15 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
-function capitalize(str) {}
+function capitalize(str) {
+  const words = [];
+
+  for (let word of str.split(" ")) {
+    // iterate through the words, (split array on spaces), capitalize the first character, and then add it to the slice of the rest of the word. Then push that onto our empty words array.
+    words.push(word[0].toUpperCase() + word.slice(1));
+  }
+  // after iterating through all of our words and capitalizing, and rejoin together with the space into a sentence.
+  return words.join(" ");
+}
 
 module.exports = capitalize;
