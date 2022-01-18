@@ -39,3 +39,5 @@ If we don't meet the if statement, than rather than adding a pound, we want to a
 
 Last key, is after running through the for loop, take that stair, and console log it.
 Then when we move onto next row/iteration, going to redeclare as an empty string.
+
+Highly recommend to always pseudocode a solution in a white board interview. Explains your process, can find flaws in logic, rather than jumping right into coding.
