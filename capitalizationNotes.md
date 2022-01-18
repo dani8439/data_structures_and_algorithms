@@ -49,3 +49,7 @@ Solution has 1 big weakness to it. If no space doesn't work well with very first
 1. Create 'result' which is the first cahracter of the input string capitalized instead.
 
 Then as we iterate through rest of array of characters, start at index 1, consider everything from there moving forward. Requires a manual for loop. A for of loop iterates through every character. Don't want to do that, want to skip that.
+
+Solution 2 is a little weak. Don't always capitalize first character in a sentence. Wouldn't want to capitalize in a Spanish sentence. Not happy having it hard coded to capitalize first character automatically.
+
+Still don't think second solution is legible at first glance. First one is
