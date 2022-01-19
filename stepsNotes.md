@@ -41,3 +41,33 @@ Last key, is after running through the for loop, take that stair, and console lo
 Then when we move onto next row/iteration, going to redeclare as an empty string.
 
 Highly recommend to always pseudocode a solution in a white board interview. Explains your process, can find flaws in logic, rather than jumping right into coding.
+
+## Recursive Solution
+
+With recursion, we always start off with some type of function. First thing we always do, is to identify the base case. The base case is when we decide there is no more work to do, and time to stop the recursion process. 0. If number being passed in is equal to 0, we end. Nailing your base case is critical during recursion process. End up in infinite recursive solution if don't think about base case until the end.
+
+After checking to see if we've met the base case, do some amount of work, and call the function again.
+
+Last step, is to call our function again. Extremely critical to change the arguments in some fashion. If we call the function with n, will be stuck in an infinite loop.
+
+```
+function printNumber(n) {
+  if (n === 0) {
+    return;
+  }
+  console.log(n);
+  printNumber(n - 1);
+
+}
+
+printNumber(10);
+```
+
+Some takeaways we notice about recursion.
+
+**Recursion Tips**
+
+1. Figure out the bare minimum pieces of information to represent your problem.
+2. Give reasonable defaults to the bare minimum pieces of info.
+3. Check the base case. Is there any work left to do? If not, return.
+4. Do some work. Call your function again, making sure the arguments have changed in some fashion.
