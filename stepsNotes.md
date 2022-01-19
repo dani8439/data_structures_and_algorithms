@@ -73,3 +73,9 @@ Some takeaways we notice about recursion.
 4. Do some work. Call your function again, making sure the arguments have changed in some fashion.
 
 Now let's take the recursion tips, and apply it to the steps problem.
+
+#### Logic
+
+If (row === n) then we have hit the end of our problem.
+If the 'stair' string has a length === n, then we are at the end of a row.
+If the length of the stair string is less than or equal to the row number we're working on, we add a '#', otherwise add a space.
