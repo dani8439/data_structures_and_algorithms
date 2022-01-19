@@ -49,6 +49,9 @@ function steps(n, row = 0, stair = "") {
     return steps(n, row + 1);
   }
 
+  // ternary oprator logic instead/condensed:
+  // const add = stair.length <= row ? '#' : ' ';
+  // steps(n, row, stair + add);
   if (stair.length <= row) {
     stair += "#";
   } else {

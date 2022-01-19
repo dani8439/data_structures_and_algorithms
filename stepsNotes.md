@@ -79,3 +79,7 @@ Now let's take the recursion tips, and apply it to the steps problem.
 If (row === n) then we have hit the end of our problem.
 If the 'stair' string has a length === n, then we are at the end of a row.
 If the length of the stair string is less than or equal to the row number we're working on, we add a '#', otherwise add a space.
+
+**Note** If possible, try the iterative solution first, and then if you can get that working, move onto recursion if in a job interview. Hard to get into the mindset of recursion right away.
+
+If wanted to, could shorten up the if statement with a ternary operator:
