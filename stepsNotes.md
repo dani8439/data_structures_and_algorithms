@@ -71,3 +71,5 @@ Some takeaways we notice about recursion.
 2. Give reasonable defaults to the bare minimum pieces of info.
 3. Check the base case. Is there any work left to do? If not, return.
 4. Do some work. Call your function again, making sure the arguments have changed in some fashion.
+
+Now let's take the recursion tips, and apply it to the steps problem.
