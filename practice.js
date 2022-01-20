@@ -63,28 +63,6 @@ function maxChar(str) {
   return maxChar;
 }
 
-function maxChar(str) {
-  const charMap = {};
-  let max = 0;
-  let maxChar = "";
-
-  for (let char of str) {
-    if (charMap[char]) {
-      charMap[char]++;
-    } else {
-      charMap[char] = 1;
-    }
-  }
-
-  for (let char in charMap) {
-    if (charMap[char] > max) {
-      max = charMap[char];
-      maxChar = char;
-    }
-  }
-  return maxChar;
-}
-
 function fizzBuzz(n) {
   for (let num = 1; num <= n; num++) {
     if (num % 3 === 0 && num % 5 === 0) {
@@ -157,4 +135,61 @@ function anagrams(stringA, stringB) {
 
 function cleanString(str) {
   return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
+}
+
+function capitalize(str) {
+  const words = [];
+
+  for (let word of str.split(" ")) {
+    words.push(word[0].toUpperCase() + word.slice(1));
+  }
+
+  return words.join(" ");
+}
+
+function capitalize2(str) {
+  let result = str[0].toUpperCase();
+
+  for (let i = 1; i < str.length; i++) {
+    if (str[i - 1] === " ") {
+      result += str[i].toUpperCase();
+    } else {
+      result += str[i];
+    }
+  }
+  return result;
+}
+
+function steps(n) {
+  for (let row = 0; row < n; row++) {
+    let stair = "";
+
+    for (let column = 0; column < n; column++) {
+      if (column <= row) {
+        stair += "#";
+      } else {
+        stair += " ";
+      }
+    }
+    console.log(stair);
+  }
+}
+
+// Recursive Solution:
+function steps2(n, row = 0, stair = "") {
+  if (n === row) {
+    return;
+  }
+
+  if (n === stair.length) {
+    console.log(stair);
+    return steps(n, row + 1);
+  }
+
+  if (stair.length <= row) {
+    stair += "#";
+  } else {
+    stair += " ";
+  }
+  steps(n, row, stair);
 }
