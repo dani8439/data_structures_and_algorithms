@@ -1,6 +1,6 @@
 class PriorityQueue {
   constructor() {
-    this.values = [];
+    this.values = [44, 33, 55, 11, 12, 22];
   }
 
   dequeue() {
@@ -8,7 +8,7 @@ class PriorityQueue {
     const end = this.values.pop();
     if (this.values.length > 0) {
       this.values[0] = end;
-ac
+
       let index = 0;
       const length = this.values.length;
       const element = this.values[0];
@@ -67,3 +67,14 @@ class Node {
     this.priority = priority;
   }
 }
+
+
+
+
+const queue = new PriorityQueue();
+queue.enqueue(6, 6);
+queue.enqueue(10, 7);
+queue.enqueue(7, 8);
+queue.dequeue(6, 6);
+console.log(queue)
+
