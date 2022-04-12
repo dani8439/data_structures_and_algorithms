@@ -33,24 +33,9 @@ class Graph {
   }
 
   removeVertex(v1) {
-      const current = this.nodes.get(value);
-      if(current) {
-          for (const node of this.nodes.values()) {
-              node.removeAdjacent(current);
-          }
-      }
-      return this.nodes.delete(v1);
+    if (this.adjacencyList[v1]) {
+      this.adjacencyList[v1].forEach((v) => this.removeEdge(v1, v2));
+      delete this.adjacencyList[v1];
+    }
   }
-
-//   removeVertex(v1) {
-//       if(!this.graph.has(v1)) return;
-
-//       const data = this.graph.get(v1);
-//       for(let i = 0; i < data.length; i++) {
-//           this.removeEdge(data[i], v1);
-//       }
-//       this.graph.delete(v1);
-//       return;
-
-//   }
 }
