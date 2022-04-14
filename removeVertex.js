@@ -34,8 +34,27 @@ class Graph {
 
   removeVertex(v1) {
     if (this.adjacencyList[v1]) {
-      this.adjacencyList[v1].forEach((v) => this.removeEdge(v1, v2));
+      this.adjacencyList[v1].forEach((v) => this.removeEdge(v1, v));
       delete this.adjacencyList[v1];
     }
   }
 }
+
+const g = new Graph();
+
+g.addVertex("A");
+g.addVertex("B");
+g.addVertex("C");
+g.addVertex("D");
+
+g.addEdge("A", "B");
+g.addEdge("B", "C");
+g.addEdge("A", "C");
+g.addEdge("A", "D");
+g.addEdge("B", "D");
+
+g.removeEdge("A", "C");
+
+g.removeVertex("A");
+
+console.log(g);
